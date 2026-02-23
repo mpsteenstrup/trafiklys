@@ -1,0 +1,184 @@
+:root {
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --text: #14213d;
+  --muted: #4f5d75;
+  --primary: #1d4ed8;
+  --border: #dbe3f0;
+  --ok: #0f766e;
+  --warn: #b45309;
+  --stop: #b91c1c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.wrapper {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary);
+  background: #eef4ff;
+  border: 1px solid #cbd8ff;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+main {
+  padding-block: 1rem 2rem;
+}
+
+.hero,
+.card,
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 0 0 0.6rem;
+}
+
+p {
+  margin: 0 0 0.7rem;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+}
+
+.badge.green {
+  background: #d1fae5;
+  color: var(--ok);
+}
+
+.badge.yellow {
+  background: #fef3c7;
+  color: var(--warn);
+}
+
+.badge.red {
+  background: #fee2e2;
+  color: var(--stop);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 0.55rem 0.8rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn.ghost {
+  background: white;
+  color: var(--primary);
+  border-color: #cbd8ff;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+}
+
+li + li {
+  margin-top: 0.35rem;
+}
+
+footer {
+  color: #6b7280;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 0.6rem 0 1.3rem;
+}
+
+@media (min-width: 700px) {
+  .header-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .grid.two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
