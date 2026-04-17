@@ -27,7 +27,7 @@
 /* Fjern den fra toppen på helt små skærme, hvis den dækker for menuen */
 @media (max-width: 600px) {
   .top-corner-gif {
-    width: 40px;
+    width: 80px;
     right: 5px;
   }
 }
